@@ -4,18 +4,24 @@
 }
 #divnav {
   display: flex;
-  background-color: rgb(61, 26, 117);
+  background-color:#0F292F;
   width: 100wh;
   justify-content: space-between;
   align-items: center;
   padding: 10px;
+  margin-bottom: 10px;
+}
+#divS{
+    display: flex;
+    border-bottom: black solid 1px;
 }
 #divElCl {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   margin-top: 14px;
-  margin-bottom: 14px;
-  margin-left: 40vh;
+  margin-left: 325px;
+  margin-right: 300px;
+  margin-bottom: 25px;
 }
 #divElec,
 #divClo,
@@ -31,8 +37,6 @@
   font-family: "Times New Roman", Times, serif;
   font-size: 30px;
   font-weight: bold;
-}
-#search {
 }
 .productBox {
   display: flex;
@@ -56,4 +60,8 @@
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   cursor: pointer;
+}
+#searchicon{
+    color: black;
+    margin-right: 5px;
 }

@@ -8,6 +8,7 @@ const decHead=$("#decHead")
 const bagHead=$("#bagHead")
 const kitHead=$("#kitHead")
 
+header.css("color", "#CCCCCC");
 
 header.text("E-Commerce Website")
 eleHead.text("Electronic")
