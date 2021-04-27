@@ -10,19 +10,22 @@
   align-items: center;
   padding: 10px;
 }
-#divsearch {
+#divElCl {
+  display: flex;
+  justify-content: center;
+  margin-top: 14px;
+  margin-bottom: 14px;
+  margin-left: 40vh;
 }
-#divElCl{
-    display: flex;
-    justify-content: center;
-    margin-top: 14px;
-    margin-bottom: 14px;
-
+#divElec,
+#divClo,
+#divDe,
+#divSho {
+  margin-right: 30px;
 }
-#divElec{
-    display: block;
-    margin-right: 30px;
-    }
+#divmain {
+  display: flex;
+}
 #header {
   color: white;
   font-family: "Times New Roman", Times, serif;
@@ -32,25 +35,25 @@
 #search {
 }
 .productBox {
-  padding: 10px;
   display: flex;
   flex-wrap: wrap;
 }
 .productBox > * {
-  flex: 1 1 200px;
+  flex: 1 1 250px;
 }
 .secHead {
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: bold;
-    padding-left:22px;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  text-align: center;
 }
-.image{
-    width: 150px;
-    height: 150px;
+.image {
+  width: 150px;
+  height: 150px;
 }
-.card{
-    box-shadow: 0 4px 8px 0 rgba(61, 52, 52, 0.2);
+.card {
+  box-shadow: 0 4px 8px 0 rgba(61, 52, 52, 0.2);
 }
 .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  }
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
