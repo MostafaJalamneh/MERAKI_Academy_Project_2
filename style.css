@@ -1,0 +1,24 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+#divnav {
+  display: flex;
+  background-color: rgb(61, 26, 117);
+  width: 100wh;
+  justify-content:space-between;
+  align-items: center;
+  padding : 10px;
+  }
+  #divsearch{
+    
+  }
+#header{
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+#search{
+
+}
