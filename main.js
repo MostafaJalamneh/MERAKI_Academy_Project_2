@@ -12,6 +12,9 @@ const decHead=$("#decHead")
 const bagHead=$("#bagHead")
 const kitHead=$("#kitHead")
 const divElTa=$("#divElTa")
+const divClot=$("#divClot")
+
+
 const elecTa=$("#elecTa")
 const td1=$("#td1")
 const divElec=$("#divElec")
@@ -36,6 +39,8 @@ let a=0
 nav.appendTo(body)
 divP.appendTo(body)
 divElTa.appendTo(body)
+divClot.appendTo(body)
+
 
 divElec.on("click",()=>{
     a++
