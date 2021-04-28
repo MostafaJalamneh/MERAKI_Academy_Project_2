@@ -89,9 +89,17 @@
     padding-top: 10px;
     padding-bottom: 5px;
 }
+table{
+  border-spacing:10px 10px ;
+}
 td{
   padding-top: 15px;
-  padding-left: 200px;
+  padding-left: 150px;
+  padding-bottom: 50px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  font-size: 20px;
   text-align: center;
+
 }
 

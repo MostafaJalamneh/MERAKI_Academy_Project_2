@@ -14,6 +14,8 @@ const kitHead=$("#kitHead")
 const divElTa=$("#divElTa")
 const elecTa=$("#elecTa")
 const td1=$("#td1")
+const divElec=$("#divElec")
+
 
 
 
@@ -27,10 +29,21 @@ cloHead.text("Clothes")
 decHead.text("Decor")
 bagHead.text("Shoes and bags")
 kitHead.text("kitchen")
+divElTa.hide();
+let a=0
 
 
 nav.appendTo(body)
 divP.appendTo(body)
 divElTa.appendTo(body)
+
+divElec.on("click",()=>{
+    a++
+    if(a%2!==0){
+    divElTa.show();
+    }else if(a%2===0){
+        divElTa.hide()
+    }
+})
 
 
