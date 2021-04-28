@@ -8,10 +8,8 @@ const divShB = $("#divShB")
 const divSho = $("#divSho")
 const divkitc = $("#divkitc")
 const divKit = $("#divKit")
-const divpro= $("#divpro")
-const protab= $("#protab") //the table
-
-
+const divpro = $("#divpro")
+const protab = $("#protab") //the table
 
 const subMain = $("#subMain")
 const eleHead = $("#eleHead")
@@ -49,6 +47,13 @@ let cCount = 0;
 let dCount = 0
 let sCount = 0;
 let kCount = 0;
+let arr = [{ name: "HP", price: 250 }]
+
+fillData = () => {
+    $.each(arr, (elem, index) => {
+        $("<tr><td>" + + "</td><td>" + + "</td</tr>").appendTo(protab)
+    })
+}
 
 nav.appendTo(body)
 divP.appendTo(body)
@@ -58,10 +63,12 @@ divDeco.appendTo(body)
 divShB.appendTo(body)
 divkitc.appendTo(body)
 divpro.appendTo(body)
+protab.appendTo(divpro)
 
 
 divElec.on("click", () => {
-    eCount++
+    eCount++;
+    fillData()
     if (eCount % 2 !== 0 || eCount === 0) {
         divElTa.show();
         divClot.hide();
