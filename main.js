@@ -6,7 +6,10 @@ const divmain = $("#divmain")
 const divP = $("#divP")
 const divShB = $("#divShB")
 const divSho = $("#divSho")
-
+const divkitc = $("#divkitc")
+const divKit = $("#divKit")
+const divpro= $("#divpro")
+const protab= $("#protab") //the table
 
 
 
@@ -39,12 +42,13 @@ divElTa.hide();
 divClot.hide()
 divDeco.hide()
 divShB.hide()
+divkitc.hide()
 
 let eCount = 0;
 let cCount = 0;
 let dCount = 0
-let sCount=0;
-
+let sCount = 0;
+let kCount = 0;
 
 nav.appendTo(body)
 divP.appendTo(body)
@@ -52,6 +56,8 @@ divElTa.appendTo(body)
 divClot.appendTo(body)
 divDeco.appendTo(body)
 divShB.appendTo(body)
+divkitc.appendTo(body)
+divpro.appendTo(body)
 
 
 divElec.on("click", () => {
@@ -60,7 +66,8 @@ divElec.on("click", () => {
         divElTa.show();
         divClot.hide();
         divDeco.hide();
-        divShB.hide()
+        divShB.hide();
+        divkitc.hide();
     } else if (eCount % 2 === 0) {
         divElTa.hide()
     }
@@ -72,7 +79,8 @@ divClo.on("click", () => {
         divClot.show();
         divElTa.hide();
         divDeco.hide();
-        divShB.hide()
+        divShB.hide();
+        divkitc.hide();
     } else if (cCount % 2 === 0) {
         divClot.hide()
     }
@@ -84,20 +92,34 @@ divDe.on("click", () => {
         divDeco.show();
         divClot.hide();
         divElTa.hide();
-        divShB.hide()
+        divShB.hide();
+        divkitc.hide()
     } else if (dCount % 2 === 0) {
         divDeco.hide()
     }
 
 })
 divSho.on("click", () => {
-    sCount ++
+    sCount++
     if (sCount % 2 !== 0 || sCount === 0) {
         divShB.show();
         divDeco.hide();
         divClot.hide();
         divElTa.hide();
+        divkitc.hide()
     } else if (sCount % 2 === 0) {
         divShB.hide()
+    }
+})
+divKit.on("click", () => {
+    kCount++
+    if (kCount % 2 !== 0 || kCount === 0) {
+        divkitc.show();
+        divDeco.hide();
+        divClot.hide();
+        divElTa.hide();
+        divShB.hide();
+    } else if (kCount % 2 === 0) {
+        divkitc.hide()
     }
 })
