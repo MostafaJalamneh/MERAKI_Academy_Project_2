@@ -2,6 +2,9 @@
   padding: 0;
   margin: 0;
 }
+#divP{
+  display:flex;
+}
 #divnav {
   display: flex;
   background-color:#0F292F;
@@ -14,6 +17,7 @@
 #divS{
     display: flex;
     border-bottom: black solid 1px;
+    margin-bottom: 23px;
 }
 #divElCl {
   display: flex;
@@ -31,6 +35,9 @@
 }
 #divmain {
   display: flex;
+}
+#subMain{
+  
 }
 #header {
   color: white;
@@ -53,6 +60,10 @@
 .image {
   width: 150px;
   height: 150px;
+}
+.image_2 {
+  width: 200px;
+  height: 200px;
 }
 .card {
   box-shadow: 0 4px 8px 0 rgba(61, 52, 52, 0.2);
@@ -78,3 +89,9 @@
     padding-top: 10px;
     padding-bottom: 5px;
 }
+td{
+  padding-top: 15px;
+  padding-left: 200px;
+  text-align: center;
+}
+
