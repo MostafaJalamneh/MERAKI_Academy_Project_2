@@ -12,6 +12,7 @@ const divpro = $("#divpro")
 const protab = $("#protab") //the table
 const lapEve = $(".lapEve")
 const imgg=$( "<img src='./images/hp.jpg' >")
+const mobEve = $(".mobEve")
 
 
 
@@ -53,8 +54,8 @@ let dCount = 0
 let sCount = 0;
 let kCount = 0;
 let arr=[]
-let arrL = [{ name: "HP", price: 250, pic:'./images/hp.jpg' },{ name: "DELL", price: 200, pic: './images/hp.jpg' },{ name: "Apple", price: 500, pic: './images/hp.jpg' }]
-let arrP = [{ name: "Samsung Note 20", price:450, pic:'./images/hp.jpg' },{ name: "IPhone 12", price: 200, pic: './images/hp.jpg' },{ name: "Huawei Nova", price: 200, pic: './images/hp.jpg' }]
+let arrL = [{ name: "HP", price: 250, pic:'./images/hp.jpg' },{ name: "DELL", price: 200, pic: './images/dell.jpg' },{ name: "Apple", price: 500, pic: './images/apple.jpg' }]
+let arrM= [{ name: "Samsung Note 20", price:450, pic:'./images/hp.jpg' },{ name: "IPhone 12", price: 200, pic: './images/hp.jpg' },{ name: "Huawei Nova", price: 200, pic: './images/hp.jpg' }]
 let arrH = [{ name: "Sennheiser", price:125, pic:'./images/hp.jpg' },{ name: "JBL", price: 90, pic: './images/hp.jpg' },{ name: "Sony", price: 150, pic: './images/hp.jpg' }]
 let a=[];
 //<img src="./images/hp.jpg" > 
@@ -62,7 +63,7 @@ fillData = () => {
     console.log(arr[0])
     for(let i=0 ;i<arr[0].length;i++){
          a = Object.values(arr[0][i])
-    $("<tr> " +"<td>" + a[0] + "<td>" + a[1]+' $' + "<td>" + '<img class="image_1" src="./images/hp.jpg"' +"<td>" + "<button class='btn'>BUY</button>" + "</td></td></td></td></tr>").appendTo(protab)
+    $("<tr> " +"<td>" + a[0] + "<td>" + a[1]+' $' + "<td>" + `'<img class="image_1" src=${a[2]} '` + "<td>"+"<td>" + "<button class='btn'>BUY</button>" + "</td></td></td></td></td></tr>").appendTo(protab)
 }}
 
 
@@ -78,7 +79,11 @@ protab.appendTo(divpro)
 
 lapEve.on("click",()=>{
     arr.push(arrL)
-    console.log(arr)
+    fillData()
+    protab.show()
+})
+mobEve.on("click",()=>{
+    arr.push(arrM)
     fillData()
     protab.show()
 })
