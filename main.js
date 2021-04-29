@@ -17,6 +17,8 @@ const heEve = $(".heEve")
 const mevEVE = $(".mevEVE")
 const womenEVE = $(".womenEVE")
 const babyEVE = $(".babyEVE")
+const livEVE = $(".livEVE")
+const bedEVE = $(".bedEVE")
 
 
 const subMain = $("#subMain")
@@ -63,6 +65,8 @@ let arrH = [{ name: "Sennheiser", price: 125, pic: './images/sennheiser.jpg' }, 
 let arrCM = [{ name: "polo", price: 18, pic: './images/polo.png' }, { name: "Levi's", price: 14, pic: './images/Levis.jpg' }, { name: "Buck Mason", price: 12, pic: './images/buck-mason.jpg' }]
 let arrCW = [{ name: "Everlane", price: 42, pic: './images/Everlane.jpg' }, { name: "Pact", price: 25, pic: './images/Pact.jpg' }, { name: "Cuyana", price: 30, pic: './images/Cuyana.png' }]
 let arrCB = [{ name: "Hanna Andersson", price: 17, pic: './images/Hanna.jpg' }, { name: "Gerber Childrenswear", price: 35, pic: './images/Gerber.jpg' }, { name: "Jazzy Organics", price: 20, pic: './images/Jazzy.jpg' }]
+let arrDL = [{ name: "IKEA", price: 920, pic: './images/ikea.jpg' }, { name: "Apparatus", price: 1220, pic: './images/Apparatus.jpg' }]
+let arrDB = [{ name: "IKEA", price: 850, pic: './images/bik.jpg' }, { name: "Apparatus", price: 750, pic: './images/bApparatus.jpg' }]
 
 let a = [];
 //<img src="./images/hp.jpg" > 
@@ -123,6 +127,20 @@ womenEVE.on("click", () => {
 babyEVE.on("click", () => {
     $('#protab tbody').empty(); 
     arr.push(arrCB)
+    fillData()
+    protab.show()
+    arr.splice (0,arr.length)
+})
+bedEVE.on("click", () => {
+    $('#protab tbody').empty(); 
+    arr.push(arrDB)
+    fillData()
+    protab.show()
+    arr.splice (0,arr.length)
+})
+livEVE.on("click", () => {
+    $('#protab tbody').empty(); 
+    arr.push(arrDL)
     fillData()
     protab.show()
     arr.splice (0,arr.length)
