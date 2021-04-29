@@ -91,6 +91,15 @@
 .heEve:hover{
   cursor: pointer;
 }
+.womenEVE:hover{
+  cursor: pointer;
+}
+.babyEVE:hover{
+  cursor: pointer;
+}
+.mevEVE{
+  cursor: pointer;
+}
 .btn{
   width: 100px;
   height: 30px;

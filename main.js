@@ -14,7 +14,9 @@ const lapEve = $(".lapEve")
 const imgg = $("<img src='./images/hp.jpg' >")
 const mobEve = $(".mobEve")
 const heEve = $(".heEve")
-
+const mevEVE = $(".mevEVE")
+const womenEVE = $(".womenEVE")
+const babyEVE = $(".babyEVE")
 
 
 const subMain = $("#subMain")
@@ -58,6 +60,10 @@ let arr = []
 let arrL = [{ name: "HP", price: 250, pic: './images/hp.jpg' }, { name: "DELL", price: 200, pic: './images/dell.jpg' }, { name: "Apple", price: 500, pic: './images/apple.jpg' }]
 let arrM = [{ name: "Samsung Note 20", price: 450, pic: './images/samsung.jpg' }, { name: "IPhone 12", price: 600, pic: './images/iphone.png' }, { name: "Huawei Nova", price: 200, pic: './images/huawei.jpg' }]
 let arrH = [{ name: "Sennheiser", price: 125, pic: './images/sennheiser.jpg' }, { name: "JBL", price: 90, pic: './images/jbl.jpg' }, { name: "Sony", price: 150, pic: './images/sony.jpg' }]
+let arrCM = [{ name: "polo", price: 18, pic: './images/polo.png' }, { name: "Levi's", price: 14, pic: './images/Levis.jpg' }, { name: "Buck Mason", price: 12, pic: './images/buck-mason.jpg' }]
+let arrCW = [{ name: "Everlane", price: 42, pic: './images/Everlane.jpg' }, { name: "Pact", price: 25, pic: './images/Pact.jpg' }, { name: "Cuyana", price: 30, pic: './images/Cuyana.png' }]
+let arrCB = [{ name: "Hanna Andersson", price: 17, pic: './images/Hanna.jpg' }, { name: "Gerber Childrenswear", price: 35, pic: './images/Gerber.jpg' }, { name: "Jazzy Organics", price: 20, pic: './images/Jazzy.jpg' }]
+
 let a = [];
 //<img src="./images/hp.jpg" > 
 fillData = () => {
@@ -96,6 +102,27 @@ mobEve.on("click", () => {
 heEve.on("click", () => {
     $('#protab tbody').empty(); 
     arr.push(arrH)
+    fillData()
+    protab.show()
+    arr.splice (0,arr.length)
+})
+mevEVE.on("click", () => {
+    $('#protab tbody').empty(); 
+    arr.push(arrCM)
+    fillData()
+    protab.show()
+    arr.splice (0,arr.length)
+})
+womenEVE.on("click", () => {
+    $('#protab tbody').empty(); 
+    arr.push(arrCW)
+    fillData()
+    protab.show()
+    arr.splice (0,arr.length)
+})
+babyEVE.on("click", () => {
+    $('#protab tbody').empty(); 
+    arr.push(arrCB)
     fillData()
     protab.show()
     arr.splice (0,arr.length)
