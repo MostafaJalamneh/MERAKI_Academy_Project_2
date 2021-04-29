@@ -88,6 +88,9 @@
 .mobEve:hover{
   cursor: pointer;
 }
+.heEve:hover{
+  cursor: pointer;
+}
 .btn{
   width: 100px;
   height: 30px;

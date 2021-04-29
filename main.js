@@ -13,6 +13,8 @@ const protab = $("#protab") //the table
 const lapEve = $(".lapEve")
 const imgg = $("<img src='./images/hp.jpg' >")
 const mobEve = $(".mobEve")
+const heEve = $(".heEve")
+
 
 
 const subMain = $("#subMain")
@@ -55,13 +57,13 @@ let kCount = 0;
 let arr = []
 let arrL = [{ name: "HP", price: 250, pic: './images/hp.jpg' }, { name: "DELL", price: 200, pic: './images/dell.jpg' }, { name: "Apple", price: 500, pic: './images/apple.jpg' }]
 let arrM = [{ name: "Samsung Note 20", price: 450, pic: './images/samsung.jpg' }, { name: "IPhone 12", price: 600, pic: './images/iphone.png' }, { name: "Huawei Nova", price: 200, pic: './images/huawei.jpg' }]
-let arrH = [{ name: "Sennheiser", price: 125, pic: './images/hp.jpg' }, { name: "JBL", price: 90, pic: './images/hp.jpg' }, { name: "Sony", price: 150, pic: './images/hp.jpg' }]
+let arrH = [{ name: "Sennheiser", price: 125, pic: './images/sennheiser.jpg' }, { name: "JBL", price: 90, pic: './images/jbl.jpg' }, { name: "Sony", price: 150, pic: './images/sony.jpg' }]
 let a = [];
 //<img src="./images/hp.jpg" > 
 fillData = () => {
     for (let i = 0; i < arr[0].length; i++) {
         a = Object.values(arr[0][i])
-        $("<tr id='row1'> " + "<td>" + a[0] + "<td>" + a[1] + ' $' + "<td>" + `'<img class="image_1" src=${a[2]} '` + "<td>" + "<td>" + "<button class='btn'>BUY</button>" + "</td></td></td></td></td></tr>").appendTo(protab)
+        $("<tr> " + "<td>" + a[0] + "<td>" + a[1] + ' $' + "<td>" + `'<img class="image_1" src=${a[2]} '` + "<td>" + "<td>" + "<button class='btn'>BUY</button>" + "</td></td></td></td></td></tr>").appendTo(protab)
     }
 }
 
@@ -77,25 +79,28 @@ divpro.appendTo(body)
 protab.appendTo(divpro)
 
 lapEve.on("click", () => {
+    $('#protab tbody').empty();
     arr.push(arrL)
     fillData()
     protab.show()
     arr.splice (0,arr.length)    
+
 })
-let uu=0;
 mobEve.on("click", () => {
-    uu+=1
-    console.log(uu)
-    if (uu % 2 !== 0){
+    $('#protab tbody').empty(); 
     arr.push(arrM)
     fillData()
     protab.show()
     arr.splice (0,arr.length)
-    }else if(uu %2===0){
-        protab.hide()
-        document.getElementById("row1").remove();
-    }
 })
+heEve.on("click", () => {
+    $('#protab tbody').empty(); 
+    arr.push(arrH)
+    fillData()
+    protab.show()
+    arr.splice (0,arr.length)
+})
+
 
 divElec.on("click", () => {
     eCount++;
