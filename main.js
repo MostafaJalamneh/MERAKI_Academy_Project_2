@@ -48,12 +48,13 @@ let dCount = 0
 let sCount = 0;
 let kCount = 0;
 let arr = [{ name: "HP", price: 250 }]
-
+let a = Object.values(arr[0])
 fillData = () => {
-    $.each(arr, (elem, index) => {
-        $("<tr><td>" + + "</td><td>" + + "</td</tr>").appendTo(protab)
-    })
-}
+    
+        $("<tr> " + "</tr>")
+        $("<td>" + a[0] + "<td>" + a[1] + "</td></td").appendTo(protab)
+    }
+
 
 nav.appendTo(body)
 divP.appendTo(body)
