@@ -10,6 +10,8 @@ const divkitc = $("#divkitc")
 const divKit = $("#divKit")
 const divpro = $("#divpro")
 const protab = $("#protab") //the table
+const btn = $("<button>Add</button>")
+
 
 const subMain = $("#subMain")
 const eleHead = $("#eleHead")
@@ -47,13 +49,13 @@ let cCount = 0;
 let dCount = 0
 let sCount = 0;
 let kCount = 0;
-let arr = [{ name: "HP", price: 250 }]
+let arr = [{ name: "HP", price: 250, pic: './images/hp.jpg' }]
 let a = Object.values(arr[0])
 fillData = () => {
-    
-        $("<tr> " + "</tr>")
-        $("<td>" + a[0] + "<td>" + a[1] + "</td></td").appendTo(protab)
-    }
+//"<button>Add</button>"
+    $("<tr> " + "</tr>")
+    $("<td>" + a[0] + "<td>" + a[1] + "<td> <img class='image_2' src='" + a[2] + "' ><td>" + "<button class='btn'>Add</button>" + "</td></td></td></td").appendTo(protab)
+}
 
 
 nav.appendTo(body)
