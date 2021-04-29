@@ -106,6 +106,12 @@
 .bedEVE:hover{
   cursor: pointer;
 }
+.shEVE:hover{
+  cursor: pointer;
+}
+.baEVE:hover{
+  cursor: pointer;
+}
 .btn{
   width: 100px;
   height: 30px;

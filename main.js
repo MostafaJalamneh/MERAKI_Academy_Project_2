@@ -19,6 +19,10 @@ const womenEVE = $(".womenEVE")
 const babyEVE = $(".babyEVE")
 const livEVE = $(".livEVE")
 const bedEVE = $(".bedEVE")
+const shEVE = $(".shEVE")
+const baEVE = $(".baEVE")
+
+
 
 
 const subMain = $("#subMain")
@@ -67,6 +71,8 @@ let arrCW = [{ name: "Everlane", price: 42, pic: './images/Everlane.jpg' }, { na
 let arrCB = [{ name: "Hanna Andersson", price: 17, pic: './images/Hanna.jpg' }, { name: "Gerber Childrenswear", price: 35, pic: './images/Gerber.jpg' }, { name: "Jazzy Organics", price: 20, pic: './images/Jazzy.jpg' }]
 let arrDL = [{ name: "IKEA", price: 920, pic: './images/ikea.jpg' }, { name: "Apparatus", price: 1220, pic: './images/Apparatus.jpg' }]
 let arrDB = [{ name: "IKEA", price: 850, pic: './images/bik.jpg' }, { name: "Apparatus", price: 750, pic: './images/bApparatus.jpg' }]
+let arrsh = [{ name: "Adidas", price: 35, pic: './images/adidas.jpg' }, { name: "Puma", price: 25, pic: './images/puma.jpg' }]
+let arrba = [{ name: "Dior", price: 20, pic: './images/Dior.jpg' }, { name: "Prada", price: 45, pic: './images/Prada.jpg' }]
 
 let a = [];
 //<img src="./images/hp.jpg" > 
@@ -141,6 +147,20 @@ bedEVE.on("click", () => {
 livEVE.on("click", () => {
     $('#protab tbody').empty(); 
     arr.push(arrDL)
+    fillData()
+    protab.show()
+    arr.splice (0,arr.length)
+})
+shEVE.on("click", () => {
+    $('#protab tbody').empty(); 
+    arr.push(arrsh)
+    fillData()
+    protab.show()
+    arr.splice (0,arr.length)
+})
+baEVE.on("click", () => {
+    $('#protab tbody').empty(); 
+    arr.push(arrba)
     fillData()
     protab.show()
     arr.splice (0,arr.length)
