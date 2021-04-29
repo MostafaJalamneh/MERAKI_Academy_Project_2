@@ -10,7 +10,9 @@ const divkitc = $("#divkitc")
 const divKit = $("#divKit")
 const divpro = $("#divpro")
 const protab = $("#protab") //the table
-const btn = $("<button>Add</button>")
+const lapEve = $(".lapEve")
+const imgg=$( "<img src='./images/hp.jpg' >")
+
 
 
 const subMain = $("#subMain")
@@ -43,19 +45,24 @@ divClot.hide()
 divDeco.hide()
 divShB.hide()
 divkitc.hide()
+protab.hide()
 
 let eCount = 0;
 let cCount = 0;
 let dCount = 0
 let sCount = 0;
 let kCount = 0;
-let arr = [{ name: "HP", price: 250, pic: './images/hp.jpg' }]
-let a = Object.values(arr[0])
+let arr=[]
+let arrL = [{ name: "HP", price: 250, pic:'./images/hp.jpg' },{ name: "DELL", price: 200, pic: './images/hp.jpg' },{ name: "Apple", price: 500, pic: './images/hp.jpg' }]
+let arrP = [{ name: "Samsung Note 20", price:450, pic:'./images/hp.jpg' },{ name: "IPhone 12", price: 200, pic: './images/hp.jpg' },{ name: "Huawei Nova", price: 200, pic: './images/hp.jpg' }]
+let arrH = [{ name: "Sennheiser", price:125, pic:'./images/hp.jpg' },{ name: "JBL", price: 90, pic: './images/hp.jpg' },{ name: "Sony", price: 150, pic: './images/hp.jpg' }]
+
+//<img src="./images/hp.jpg" > 
 fillData = () => {
-//"<button>Add</button>"
-    $("<tr> " + "</tr>")
-    $("<td>" + a[0] + "<td>" + a[1] + "<td> <img class='image_2' src='" + a[2] + "' ><td>" + "<button class='btn'>Add</button>" + "</td></td></td></td").appendTo(protab)
-}
+    for(let i=0 ;i<arr.length;i++){
+        let a = Object.values(arr[i])
+    $("<tr> " +"<td>" + a[0] + "<td>" + a[1]+' $' + "<td>" + a[2] +"<td>" + "<button class='btn'>BUY</button>" + "</td></td></td></td></tr>").appendTo(protab)
+}}
 
 
 nav.appendTo(body)
@@ -68,6 +75,11 @@ divkitc.appendTo(body)
 divpro.appendTo(body)
 protab.appendTo(divpro)
 
+lapEve.on("click",()=>{
+    arr.push(arrL)
+    fillData()
+    protab.show()
+})
 
 divElec.on("click", () => {
     eCount++;
