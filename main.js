@@ -23,8 +23,6 @@ const shEVE = $(".shEVE")
 const baEVE = $(".baEVE")
 
 
-
-
 const subMain = $("#subMain")
 const eleHead = $("#eleHead")
 const cloHead = $("#cloHead")
@@ -73,6 +71,7 @@ let arrDL = [{ name: "IKEA", price: 920, pic: './images/ikea.jpg' }, { name: "Ap
 let arrDB = [{ name: "IKEA", price: 850, pic: './images/bik.jpg' }, { name: "Apparatus", price: 750, pic: './images/bApparatus.jpg' }]
 let arrsh = [{ name: "Adidas", price: 35, pic: './images/adidas.jpg' }, { name: "Puma", price: 25, pic: './images/puma.jpg' }]
 let arrba = [{ name: "Dior", price: 20, pic: './images/Dior.jpg' }, { name: "Prada", price: 45, pic: './images/Prada.jpg' }]
+let arrK=[{ name: "IKEA", price: 1200, pic: './images/ikeak.jpg' }, { name: "IKEA", price: 1650, pic: './images/ikeak2.png' }]
 
 let a = [];
 //<img src="./images/hp.jpg" > 
@@ -165,9 +164,8 @@ baEVE.on("click", () => {
     protab.show()
     arr.splice (0,arr.length)
 })
-
-
 divElec.on("click", () => {
+    $('#protab tbody').empty(); 
     eCount++;
     if (eCount % 2 !== 0 || eCount === 0) {
         divElTa.show();
@@ -181,6 +179,7 @@ divElec.on("click", () => {
 
 })
 divClo.on("click", () => {
+    $('#protab tbody').empty(); 
     cCount++
     if (cCount % 2 !== 0 || cCount === 0) {
         divClot.show();
@@ -194,6 +193,7 @@ divClo.on("click", () => {
 
 })
 divDe.on("click", () => {
+    $('#protab tbody').empty(); 
     dCount++
     if (dCount % 2 !== 0 || dCount === 0) {
         divDeco.show();
@@ -207,6 +207,7 @@ divDe.on("click", () => {
 
 })
 divSho.on("click", () => {
+    $('#protab tbody').empty(); 
     sCount++
     if (sCount % 2 !== 0 || sCount === 0) {
         divShB.show();
@@ -219,6 +220,7 @@ divSho.on("click", () => {
     }
 })
 divKit.on("click", () => {
+    $('#protab tbody').empty(); 
     kCount++
     if (kCount % 2 !== 0 || kCount === 0) {
         divkitc.show();
@@ -226,6 +228,11 @@ divKit.on("click", () => {
         divClot.hide();
         divElTa.hide();
         divShB.hide();
+        $('#protab tbody').empty(); 
+    arr.push(arrK)
+    fillData()
+    protab.show()
+    arr.splice (0,arr.length)
     } else if (kCount % 2 === 0) {
         divkitc.hide()
     }
