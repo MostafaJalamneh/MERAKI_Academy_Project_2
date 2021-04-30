@@ -2,27 +2,27 @@
   padding: 0;
   margin: 0;
 }
-#divP{
-  display:flex;
+#divP {
+  display: flex;
   width: 100%;
   height: 100%;
-  }
-  #subMain{
-    display: flex;
-  }
+}
+#subMain {
+  display: flex;
+}
 #divnav {
   display: flex;
-  background-color:#0F292F;
+  background-color: #0f292f;
   width: 100wh;
   justify-content: space-between;
   align-content: center;
+  text-align: center;
   padding: 10px;
   margin-bottom: 10px;
 }
-#divS{
-    display: flex;
-    border-bottom: black solid 1px;
-    margin-bottom: 23px;
+#divS {
+  border-bottom: black solid 1px;
+  margin-bottom: 23px;
 }
 #divElCl {
   display: flex;
@@ -32,6 +32,16 @@
   margin-right: 300px;
   margin-bottom: 25px;
 }
+#divCart {
+  position:fixed;
+  margin-top: 100px;
+  margin-left: 37vw;
+  width: 500px;
+  height: 500px;
+  background: rgba(165, 33, 33, 0.7);
+  top: 0px;
+  left: 0px;
+}
 #divElec,
 #divClo,
 #divDe,
@@ -40,9 +50,9 @@
 }
 #divmain {
   display: flex;
-  width: 100%;
+  width: 90%;
 }
-#divpro{
+#divpro {
   margin-top: 70px;
 }
 #header {
@@ -67,7 +77,7 @@
   width: 150px;
   height: 150px;
 }
-.image_1{
+.image_1 {
   width: 80px;
   height: 80px;
 }
@@ -82,65 +92,38 @@
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
-.lapEve:hover{
+.cur:hover {
   cursor: pointer;
 }
-.mobEve:hover{
-  cursor: pointer;
-}
-.heEve:hover{
-  cursor: pointer;
-}
-.womenEVE:hover{
-  cursor: pointer;
-}
-.babyEVE:hover{
-  cursor: pointer;
-}
-.mevEVE{
-  cursor: pointer;
-}
-.livEVE:hover{
-  cursor: pointer;
-}
-.bedEVE:hover{
-  cursor: pointer;
-}
-.shEVE:hover{
-  cursor: pointer;
-}
-.baEVE:hover{
-  cursor: pointer;
-}
-.btn{
+.btn {
   width: 100px;
   height: 30px;
   background-color: green;
   color: white;
 }
-#search{
-    width: 190px;
-    height: 33px;
+#search {
+  width: 190px;
+  height: 33px;
 }
-.hMain{
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: bold;
-    text-align: center;
-    padding-top: 10px;
-    padding-bottom: 5px;
-} 
-.table{
-width: 100%;
+.hMain {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 5px;
 }
-td{
+.table {
+  width: 100%;
+}
+td {
   padding-top: 15px;
   padding-bottom: 50px;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
   font-weight: bold;
   font-size: 20px;
-  text-align: center; 
+  text-align: center;
 }
-#cart{
+#cart {
   color: white;
   margin-left: 10px;
   width: 30px;
@@ -154,4 +137,3 @@ td{
 /*<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash-circle-fill" viewBox="0 0 16 16">
   <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1h-7z"/>
 </svg>*/
-
