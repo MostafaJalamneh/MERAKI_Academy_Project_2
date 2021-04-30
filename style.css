@@ -39,9 +39,10 @@
   margin-left: 37vw;
   width: 500px;
   height: 500px;
-  background: rgba(165, 33, 33, 0.7);
+  background: rgba(0, 0, 0, 0.7);
   top: 0px;
   left: 0px;
+  color: white;
 }
 #divElec,
 #divClo,
@@ -129,6 +130,12 @@ td {
   margin-left: 10px;
   width: 30px;
   height: 30px;
+}
+.im1{
+  width: 100%;
+}
+.slider{
+  display: none;
 }
 
 /*<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">

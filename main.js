@@ -27,8 +27,11 @@ const cartTab = $("#cartTab")
 const btn1 = $("#b0")
 const btn2 = $("#b1")
 const btn3 = $("#b2")
-
-
+const sliderS=$("#sliderS")
+const slide1=$(".slider")
+let slide=0;
+let i;
+let y;
 
 const subMain = $("#subMain")
 const eleHead = $("#eleHead")
@@ -92,14 +95,25 @@ fillData = () => {
     }
 }
 cartF = () => {
-    if($("button").attr("id") === "b0"){
-        console.log(arC[0],arC[1])
-    }else if($("button").attr("id") === "b1"){
-        console.log(arC[2],arC[3])
-    }else if($("button").attr("id") === "b2"){
-        console.log(arC[4],arC[5])
+    if ($("button").attr("id") === "b0") {
+        console.log(arC[0], arC[1] + '$')
+    } else if ($("button").attr("id") === "b1") {
+        console.log(arC[2], arC[3])
+    } else if ($("button").attr("id") === "b2") {
+        console.log(arC[4], arC[5])
     }
-    divCart
+}
+sli = () => {
+    y= document.getElementsByClassName("slide1")
+    for (i = 0; i < y.length; i++) {
+        y[i].style.display = "none";  
+    }
+    slide ++
+    if(slide >y.length){
+        slide=1
+    }
+    y[slide-1].style.display="block"
+    setTimeout(carousel, 2500);
 }
 
 
@@ -112,6 +126,8 @@ divShB.appendTo(body)
 divkitc.appendTo(body)
 divpro.appendTo(body)
 protab.appendTo(divpro)
+sliderS.appendTo(body)
+
 
 lapEve.on("click", () => {
     $('#protab tbody').empty();
@@ -259,5 +275,7 @@ divKit.on("click", () => {
     }
 })
 cart.on("click", () => {
-    console.log("test")
+    divCart.show()
+    $("<tr>" + "<td>" + arC[0] + "<td>" + arC[1] + ' $' + "</td></td></tr>").appendTo(cartTab)
+
 })
