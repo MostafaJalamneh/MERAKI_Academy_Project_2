@@ -9,6 +9,7 @@
 }
 #subMain {
   display: flex;
+  width: 100%;
 }
 #divnav {
   display: flex;
@@ -50,7 +51,7 @@
 }
 #divmain {
   display: flex;
-  width: 90%;
+  width: 100%;
 }
 #divpro {
   margin-top: 70px;
