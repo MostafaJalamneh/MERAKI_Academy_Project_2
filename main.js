@@ -9,7 +9,7 @@ const divSho = $("#divSho")
 const divkitc = $("#divkitc")
 const divKit = $("#divKit")
 const divpro = $("#divpro")
-const protab = $("#protab") 
+const protab = $("#protab")
 const lapEve = $(".lapEve")
 const imgg = $("<img src='./images/hp.jpg' >")
 const mobEve = $(".mobEve")
@@ -23,7 +23,7 @@ const shEVE = $(".shEVE")
 const baEVE = $(".baEVE")
 const cart = $("#cart")
 const divCart = $("#divCart")
-
+const cartTab = $("#cartTab")
 
 
 
@@ -79,13 +79,21 @@ let arrba = [{ name: "Dior", price: 20, pic: './images/Dior.jpg' }, { name: "Pra
 let arrK = [{ name: "IKEA", price: 1200, pic: './images/ikeak.jpg' }, { name: "IKEA", price: 1650, pic: './images/ikeak2.png' }]
 
 let a = [];
-//<img src="./images/hp.jpg" > 
 fillData = () => {
     for (let i = 0; i < arr[0].length; i++) {
         a = Object.values(arr[0][i])
-        $("<tr> " + "<td>" + a[0] + "<td>" + a[1] + ' $' + "<td>" + `'<img class="image_1" src=${a[2]} '` + "<td>" + "<td>" + "<button class='btn'>BUY</button>" + "</td></td></td></td></td></tr>").appendTo(protab)
+        $("<tr> " + "<td>" + a[0] + "<td>" + a[1] + ' $' + "<td>" + `'<img class="image_1" src=${a[2]} '` + "<td>" + "<td>" + `<button id='b${i}' class='btn'>BUY</button>` + "</td></td></td></td></td></tr>").appendTo(protab)
     }
 }
+
+cartF = () => {
+    if (b0.on("click", () => {
+        
+    })) {
+
+    }
+}
+
 
 
 nav.appendTo(body)
@@ -242,6 +250,6 @@ divKit.on("click", () => {
         divkitc.hide()
     }
 })
-cart.on("click",()=>{
+cart.on("click", () => {
     console.log("test")
 })
