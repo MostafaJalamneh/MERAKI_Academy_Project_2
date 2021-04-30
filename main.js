@@ -24,6 +24,10 @@ const baEVE = $(".baEVE")
 const cart = $("#cart")
 const divCart = $("#divCart")
 const cartTab = $("#cartTab")
+const btn1 = $("#b0")
+const btn2 = $("#b1")
+const btn3 = $("#b2")
+
 
 
 const subMain = $("#subMain")
@@ -77,17 +81,26 @@ let arrsh = [{ name: "Adidas", price: 35, pic: './images/adidas.jpg' }, { name: 
 let arrba = [{ name: "Dior", price: 20, pic: './images/Dior.jpg' }, { name: "Prada", price: 45, pic: './images/Prada.jpg' }]
 let arrK = [{ name: "IKEA", price: 1200, pic: './images/ikeak.jpg' }, { name: "IKEA", price: 1650, pic: './images/ikeak2.png' }]
 let a = [];
+let arC = [];
+let art = []
 fillData = () => {
-    for (let i = 0; i < arr[0].length; i++) {
-        a = Object.values(arr[0][i])
-        $("<tr> " + "<td>" + a[0] + "<td>" + a[1] + ' $' + "<td>" + `'<img class="image_1" src=${a[2]} '` + "<td>" + "<td>" + `<button  onclick="cartF()"  class='btn'>BUY</button>` + "</td></td></td></td></td></tr>").appendTo(protab)
+    for (let i1 = 0; i1 < arr[0].length; i1++) {
+        a = Object.values(arr[0][i1])
+        art.unshift(a[0], a[1])
+        arC.push(art[0], art[1])
+        $("<tr> " + "<td>" + a[0] + "<td>" + a[1] + ' $' + "<td>" + `'<img class="image_1" src=${a[2]} '` + "<td>" + "<td>" + `<button onclick="cartF()" id='b${i1}' class='btn'>BUY</button>` + "</td></td></td></td></td></tr>").appendTo(protab)
     }
 }
-
 cartF = () => {
-    console.log("test")
+    if($("button").attr("id") === "b0"){
+        console.log(arC[0],arC[1])
+    }else if($("button").attr("id") === "b1"){
+        console.log(arC[2],arC[3])
+    }else if($("button").attr("id") === "b2"){
+        console.log(arC[4],arC[5])
+    }
+    divCart
 }
-
 
 
 nav.appendTo(body)
