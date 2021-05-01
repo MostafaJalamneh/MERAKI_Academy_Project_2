@@ -21,6 +21,8 @@
                 <ul>
                     <li><a href="mailto:mostafa.jalamneh17@gmail.com?subject=subject&body=Write your message here">
                             Contact Us </a></li>
+                    <li id="showP"><a href="#divShow">Show your products</a></li>
+
                 </ul>
                 <svg id="cart" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                     class="bi bi-cart4 cur" viewBox="0 0 16 16">
@@ -65,109 +67,148 @@
                             <path
                                 d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z" />
                         </svg>
-                        
+
                         <table id="cartTab" class="table">
-                            <th>Product</th>
-                            <th>Price</th>
+                            <tr>
+                                <th>Product</th>
+                                <th>Price</th>
+                            </tr>
                         </table>
                         <h5 id="hTotal"></h5>
                     </div>
-                    <div id="divElTa">
-                        <table id="elecTa" class="table">
-                            <tr>
-                                <td id="td1">
-                                    <img class="image_2 lapEve cur" src="./images/laptop.jpg" />
-                                </td>
-                                <td id="td2">
-                                    <img class="image_2 mobEve cur" src="./images/mobile.png" />
-                                </td>
-                                <td>
-                                    <img class="image_2 heEve cur" src="./images/headphones.jpg" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <h2 class="hMain">The subsections</h2>
-                                <td class="cur">Laptops</td>
-                                <td class="cur">Mobiles</td>
-                                <td class="cur">Headphones</td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div id="divClot">
-                        <table id="cloTa" class="table">
-                            <tr>
-                                <h2 class="hMain">The subsections</h2>
-                                <td id="td1c">
-                                    <img class="image_2 mevEVE cur" src="./images/men.jpg" />
-                                </td>
-                                <td id="td2c">
-                                    <img class="image_2 womenEVE cur" src="./images/women.jpg" />
-                                </td>
-                                <td id="td3c">
-                                    <img class="image_2 babyEVE cur" src="./images/baby.jpg" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="mevEVE cur">Men</td>
-                                <td class="womenEVE cur">Women</td>
-                                <td class="babyEVE cur">Baby</td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div id="divDeco">
-                        <table id="decTa" class="table">
-                            <tr>
-                                <h2 class="hMain">The subsections</h2>
-                                <td id="td1d">
-                                    <img class="image_2 livEVE cur" src="./images/decor.jpg" />
-                                </td>
-                                <td id="td2d">
-                                    <img class="image_2 bedEVE cur" src="./images/bed.jpg" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="livEVE cur">Living room</td>
-                                <td class="bedEVE cur">Bed room</td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div id="divShB">
-                        <table id="shBTa" class="table">
-                            <tr>
-                                <h2 class="hMain">The subsections</h2>
-                                <td id="td1s">
-                                    <img class="image_2 shEVE cur" src="./images/shoes.jpg" />
-                                </td>
-                                <td id="td2s">
-                                    <img class="image_2 baEVE cur" src="./images/bags.jpg" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="cur">Shoes</td>
-                                <td class="cur">Bags</td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div id="divkitc">
-                        <table id="kitTa" class="table">
-                            <tr>
-                                <h2 class="hMain">The subsections</h2>
-                                <td id="td1k">
-                                </td>
-                            </tr>
-                            <tr>
-                    </div>
-                    <div id="divpro">
-                        <table id="protab" class="table">
-                            
-                        </table>
+                    <div id="divShow">
+                        <svg id="exit1" xmlns="http://www.w3.org/2000/svg" width="30" height="25" fill="currentColor"
+                            class="bi bi-x-square-fill cur" viewBox="0 0 16 16">
+                            <path
+                                d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z" />
+                        </svg>
+                        <div class="cName">
+                            <h5>Company name</h5>
+                            <input type="text" class="inp">
+                        </div>
+
+                        <div class="cName">
+                            <h5>your name</h5>
+                            <input type="text" class="inp">
+                        </div>
+                        <div class="cName">
+                            <h5>product type</h5>
+                            <input type="checkbox" id="ch1">
+                            <label for="ch1">Men</label>
+                            <input type="checkbox" id="ch2">
+                            <label for="ch1">Women</label>
+                            <input type="checkbox" id="ch3">
+                            <label for="ch1">Baby</label>
+                            <input type="checkbox" id="ch1">
+                            <label for="ch1">Other</label>
+
+                        </div>
+                        <div class="cName">
+                            <h5>Phone / Email</h5>
+                            <input type="text" class="inp">
+                        </div>
+                        <button class="sBtn">Send</button>
+
                     </div>
 
                 </div>
+            </div>
+            <div id="divElTa">
+                <table id="elecTa" class="table">
+                    <tr>
+                        <td id="td1">
+                            <img class="image_2 lapEve cur" src="./images/laptop.jpg" />
+                        </td>
+                        <td id="td2">
+                            <img class="image_2 mobEve cur" src="./images/mobile.png" />
+                        </td>
+                        <td>
+                            <img class="image_2 heEve cur" src="./images/headphones.jpg" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <h2 class="hMain">The subsections</h2>
+                        <td class="cur">Laptops</td>
+                        <td class="cur">Mobiles</td>
+                        <td class="cur">Headphones</td>
+                    </tr>
+                </table>
+            </div>
+            <div id="divClot">
+                <table id="cloTa" class="table">
+                    <tr>
+                        <h2 class="hMain">The subsections</h2>
+                        <td id="td1c">
+                            <img class="image_2 mevEVE cur" src="./images/men.jpg" />
+                        </td>
+                        <td id="td2c">
+                            <img class="image_2 womenEVE cur" src="./images/women.jpg" />
+                        </td>
+                        <td id="td3c">
+                            <img class="image_2 babyEVE cur" src="./images/baby.jpg" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="mevEVE cur">Men</td>
+                        <td class="womenEVE cur">Women</td>
+                        <td class="babyEVE cur">Baby</td>
+                    </tr>
+                </table>
+            </div>
+            <div id="divDeco">
+                <table id="decTa" class="table">
+                    <tr>
+                        <h2 class="hMain">The subsections</h2>
+                        <td id="td1d">
+                            <img class="image_2 livEVE cur" src="./images/decor.jpg" />
+                        </td>
+                        <td id="td2d">
+                            <img class="image_2 bedEVE cur" src="./images/bed.jpg" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="livEVE cur">Living room</td>
+                        <td class="bedEVE cur">Bed room</td>
+                    </tr>
+                </table>
+            </div>
+            <div id="divShB">
+                <table id="shBTa" class="table">
+                    <tr>
+                        <h2 class="hMain">The subsections</h2>
+                        <td id="td1s">
+                            <img class="image_2 shEVE cur" src="./images/shoes.jpg" />
+                        </td>
+                        <td id="td2s">
+                            <img class="image_2 baEVE cur" src="./images/bags.jpg" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="cur">Shoes</td>
+                        <td class="cur">Bags</td>
+                    </tr>
+                </table>
+            </div>
+            <div id="divkitc">
+                <table id="kitTa" class="table">
+                    <tr>
+                        <h2 class="hMain">The subsections</h2>
+                        <td id="td1k">
+                        </td>
+                    </tr>
+                    <tr>
+            </div>
+            <div id="divpro">
+                <table id="protab" class="table">
 
+                </table>
             </div>
 
         </div>
+
+    </div>
+
+    </div>
 
 
 </body>

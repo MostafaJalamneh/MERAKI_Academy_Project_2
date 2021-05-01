@@ -28,7 +28,10 @@ const btn1 = $("#b0")
 const btn2 = $("#b1")
 const btn3 = $("#b2")
 const exit = $("#exit")
+const exit1=$('#exit1')
 const hTotal = $('#hTotal')
+const divShow=$('#divShow')
+const showP=$('#showP')
 
 
 const subMain = $("#subMain")
@@ -63,6 +66,7 @@ divShB.hide()
 divkitc.hide()
 protab.hide()
 divCart.hide()
+divShow.hide()
 
 let eCount = 0;
 let cCount = 0;
@@ -264,17 +268,27 @@ divKit.on("click", () => {
 let to = 0;
 cart.on("click", () => {
     divCart.show()
-    $("<tr>" + "<td>" + ar[0] + "<td>" + ar[1] + ' $' + "</td></td></tr>").appendTo(cartTab)
+    $("<tr>" + "<td>" + ar[0] + "<td>" + ar[1] + ' $' + "<td>"+`<button onclick="Remove()" class='btn1'>Remove</button>`+"</td></td></td></tr>").appendTo(cartTab)
     exit.on("click", () => {
         divCart.hide()
-        localStorage.setItem("test3",ar)
+        localStorage.setItem("product",ar)
         window.localStorage.getItem('test3');
 
     })
     to += arC[1]
     hTotal.text(' Total= ' + to)
-    localStorage.setItem("test2",to)
-    window.localStorage.getItem('test2');
+    localStorage.setItem("total",to)
 
 
+})
+Remove = ()=>{
+    $('#cartTab ').find("tr:gt(0)").remove();;
+    hTotal.text(' Total= ' + 0)
+    to-=arC[1]
+}
+showP.on("click",()=>{
+    divShow.show()
+    exit1.on("click", () => {
+        divShow.hide()
+    })
 })

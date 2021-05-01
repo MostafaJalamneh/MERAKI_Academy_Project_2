@@ -45,7 +45,18 @@
   margin-left: 37vw;
   width: 500px;
   height: 500px;
-  background:#c07409;
+  background: #c07409;
+  top: 0px;
+  left: 0px;
+  color: white;
+}
+#divShow {
+  position: fixed;
+  margin-top: 100px;
+  margin-left: 37vw;
+  width: 500px;
+  height: 500px;
+  background: #c07409;
   top: 0px;
   left: 0px;
   color: white;
@@ -69,8 +80,32 @@
   font-size: 30px;
   font-weight: bold;
 }
-#exit{
-color: red;
+#exit {
+  color: red;
+}
+#exit1 {
+  color: red;
+}
+.inp {
+  width: 220px;
+  height: 30;
+  border-radius: 10px;
+}
+.sBtn {
+  width: 250px;
+  height: 30px;
+  background-color: green;
+  color: white;
+  border-radius: 15px;
+  margin-top: 50px;
+  margin-left: 130px;
+}
+.cName {
+  padding-top: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  justify-content: space-between;
 }
 .productBox {
   display: flex;
@@ -112,6 +147,12 @@ color: red;
   background-color: green;
   color: white;
 }
+.btn1 {
+  width: 100px;
+  height: 30px;
+  background-color: red;
+  color: white;
+}
 #search {
   width: 190px;
   height: 33px;
@@ -142,13 +183,13 @@ td {
   height: 30px;
   left: 50%;
 }
-#hTotal{
+#hTotal {
   color: white;
   padding: 15px;
 }
 li {
   float: right;
-  padding-right: 10px;
+  padding-right: 15px;
 }
 ul {
   list-style-type: none;
@@ -158,6 +199,7 @@ li a {
   font-weight: bold;
   color: white;
   text-decoration: none;
+  text-align: center;
 }
 a:hover {
   color: yellow;
