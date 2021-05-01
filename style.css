@@ -125,6 +125,7 @@ color: red;
 }
 .table {
   width: 100%;
+  text-align: center;
 }
 td {
   padding-top: 15px;
@@ -140,6 +141,10 @@ td {
   width: 30px;
   height: 30px;
   left: 50%;
+}
+#hTotal{
+  color: white;
+  padding: 15px;
 }
 li {
   float: right;
