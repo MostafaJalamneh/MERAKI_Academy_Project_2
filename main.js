@@ -27,7 +27,8 @@ const cartTab = $("#cartTab")
 const btn1 = $("#b0")
 const btn2 = $("#b1")
 const btn3 = $("#b2")
-//const cart=$("#cart")
+const exit = $("#exit")
+
 
 
 const subMain = $("#subMain")
@@ -46,7 +47,7 @@ const elecTa = $("#elecTa")
 const td1 = $("#td1")
 const divElec = $("#divElec")
 
-header.css("color", "#CCCCCC");
+header.css("color", "white");
 td1.css("background-image", "url(./images/HP.png)")
 
 header.text("E-Commerce Website")
@@ -260,5 +261,7 @@ divKit.on("click", () => {
 cart.on("click", () => {
     divCart.show()
     $("<tr>" + "<td>" + arC[0] + "<td>" + arC[1] + ' $' + "</td></td></tr>").appendTo(cartTab)
-
+    exit.on("click",()=>{
+        divCart.hide()
+    })
 })

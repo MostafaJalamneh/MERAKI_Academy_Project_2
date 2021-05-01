@@ -11,14 +11,14 @@
   display: flex;
   width: 100%;
 }
-#divT{
+#divT {
   display: flex;
   text-align: center;
   padding-right: 10px;
 }
 #divnav {
   display: flex;
-  justify-content:space-around;
+  justify-content: space-around;
   background-color: #0f292f;
   width: 100wh;
   justify-content: space-between;
@@ -40,12 +40,12 @@
   margin-bottom: 25px;
 }
 #divCart {
-  position:fixed;
+  position: fixed;
   margin-top: 100px;
   margin-left: 37vw;
   width: 500px;
   height: 500px;
-  background: rgba(0, 0, 0, 0.7);
+  background:#c07409;
   top: 0px;
   left: 0px;
   color: white;
@@ -68,6 +68,9 @@
   font-family: "Times New Roman", Times, serif;
   font-size: 30px;
   font-weight: bold;
+}
+#exit{
+color: red;
 }
 .productBox {
   display: flex;
@@ -137,7 +140,6 @@ td {
   width: 30px;
   height: 30px;
   left: 50%;
-  
 }
 li {
   float: right;
@@ -153,5 +155,5 @@ li a {
   text-decoration: none;
 }
 a:hover {
-  color: rgb(73, 182, 233);
+  color: yellow;
 }
