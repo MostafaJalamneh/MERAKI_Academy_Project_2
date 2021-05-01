@@ -28,10 +28,10 @@ const btn1 = $("#b0")
 const btn2 = $("#b1")
 const btn3 = $("#b2")
 const exit = $("#exit")
-const exit1=$('#exit1')
+const exit1 = $('#exit1')
 const hTotal = $('#hTotal')
-const divShow=$('#divShow')
-const showP=$('#showP')
+const divShow = $('#divShow')
+const showP = $('#showP')
 
 
 const subMain = $("#subMain")
@@ -87,26 +87,19 @@ let arrba = [{ name: "Dior", price: 20, pic: './images/Dior.jpg' }, { name: "Pra
 let arrK = [{ name: "IKEA", price: 1200, pic: './images/ikeak.jpg' }, { name: "IKEA", price: 1650, pic: './images/ikeak2.png' }]
 let a = [];
 let arC = [];
-let art = []
+let art = [];
+let ar = [];
 
 fillData = () => {
     for (let i1 = 0; i1 < arr[0].length; i1++) {
         a = Object.values(arr[0][i1])
         art.unshift(a[0], a[1])
         arC.push(art[0], art[1])
-        $("<tr> " + "<td>" + a[0] + "<td>" + a[1] + ' $' + "<td>" + `'<img class="image_1" src=${a[2]} '` + "<td>" + "<td>" + `<button onclick="cartF()" id='b${i1}' class='btn'>BUY</button>` + "</td></td></td></td></td></tr>").appendTo(protab)
+        $("<tr> " + "<td>" + a[0] + "<td>" + a[1] + ' $' + "<td>" + `'<img class="image_1" src=${a[2]} '` + "<td>" + "<td>" + `<button onclick="cartF('${art[0]}', '${art[1]}')" id='b${i1}' class='btn'>BUY</button>` + "</td></td></td></td></td></tr>").appendTo(protab)
     }
 }
-let ar = []
-cartF = () => {
-
-    if ($("button").attr("id") === "b0") {
-        ar.push(arC[0], arC[1])
-    } else if ($("button").attr("id") === "b1") {
-        ar.push(arC[2], arC[3])
-    } else if ($("button").attr("id") === "b2") {
-        ar.push(arC[4], arC[5])
-    }
+cartF = (a, b) => {
+    ar.push(a, b)
 }
 
 
@@ -268,25 +261,25 @@ divKit.on("click", () => {
 let to = 0;
 cart.on("click", () => {
     divCart.show()
-    $("<tr>" + "<td>" + ar[0] + "<td>" + ar[1] + ' $' + "<td>"+`<button onclick="Remove()" class='btn1'>Remove</button>`+"</td></td></td></tr>").appendTo(cartTab)
+    $("<tr>" + "<td>" + ar[0] + "<td>" + ar[1] + ' $' + "<td>" + `<button onclick="Remove()" class='btn1'>Remove</button>` + "</td></td></td></tr>").appendTo(cartTab)
     exit.on("click", () => {
         divCart.hide()
-        localStorage.setItem("product",ar)
+        localStorage.setItem("product", ar)
         window.localStorage.getItem('test3');
 
     })
     to += arC[1]
     hTotal.text(' Total= ' + to)
-    localStorage.setItem("total",to)
+    localStorage.setItem("total", to)
 
 
 })
-Remove = ()=>{
+Remove = () => {
     $('#cartTab ').find("tr:gt(0)").remove();;
     hTotal.text(' Total= ' + 0)
-    to-=arC[1]
+    to -= arC[1]
 }
-showP.on("click",()=>{
+showP.on("click", () => {
     divShow.show()
     exit1.on("click", () => {
         divShow.hide()
