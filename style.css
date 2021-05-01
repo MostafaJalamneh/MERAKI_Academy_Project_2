@@ -11,8 +11,14 @@
   display: flex;
   width: 100%;
 }
+#divT{
+  display: flex;
+  text-align: center;
+  padding-right: 10px;
+}
 #divnav {
   display: flex;
+  justify-content:space-around;
   background-color: #0f292f;
   width: 100wh;
   justify-content: space-between;
@@ -133,43 +139,19 @@ td {
   left: 50%;
   
 }
-@keyframes slider{
-  0%{
-      left: 0;
-  }
-  20%{
-      left: 0;
-  }
-
-  50%{
-    left: -150%;
+li {
+  float: right;
+  padding-right: 10px;
 }
+ul {
+  list-style-type: none;
 }
-#slider{
-  overflow: hidden;
-
+li a {
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
 }
-#slider figure img{
-   width: 20%;
-   float: left;
+a:hover {
+  color: rgb(73, 182, 233);
 }
-#slider figure{
-  position: relative;
-  width: 500%;
-  margin: 0;
-  left: 0;
-  animation:20s slider infinite ;
-}
-.imge{
-  width: 250px;
-  height: 400px;
-}
-
-
-/*<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
-  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
-</svg>*/
-
-/*<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash-circle-fill" viewBox="0 0 16 16">
-  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1h-7z"/>
-</svg>*/
