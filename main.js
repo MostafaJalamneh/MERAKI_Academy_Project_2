@@ -53,7 +53,7 @@ const divElec = $("#divElec")
 header.css("color", "white");
 td1.css("background-image", "url(./images/HP.png)")
 
-header.text("E-Commerce Website")
+header.text("M-Shop")
 eleHead.text("Electronic")
 cloHead.text("Clothes")
 decHead.text("Decor")
@@ -122,7 +122,7 @@ protab.appendTo(divpro)
 
 
 lapEve.on("click", () => {
-    $('#protab').empty();
+    $('#protab').find("tr:gt(0)").remove();
     arr.push(arrL)
     fillData()
     protab.show()
@@ -130,70 +130,70 @@ lapEve.on("click", () => {
 
 })
 mobEve.on("click", () => {
-    $('#protab').empty();
+    $('#protab').find("tr:gt(0)").remove();
     arr.push(arrM)
     fillData()
     protab.show()
     arr.splice(0, arr.length)
 })
 heEve.on("click", () => {
-    $('#protab').empty();
+    $('#protab').find("tr:gt(0)").remove();
     arr.push(arrH)
     fillData()
     protab.show()
     arr.splice(0, arr.length)
 })
 mevEVE.on("click", () => {
-    $('#protab').empty();
+    $('#protab').find("tr:gt(0)").remove();
     arr.push(arrCM)
     fillData()
     protab.show()
     arr.splice(0, arr.length)
 })
 womenEVE.on("click", () => {
-    $('#protab').empty();
+    $('#protab').find("tr:gt(0)").remove();
     arr.push(arrCW)
     fillData()
     protab.show()
     arr.splice(0, arr.length)
 })
 babyEVE.on("click", () => {
-    $('#protab').empty();
+    $('#protab').find("tr:gt(0)").remove();
     arr.push(arrCB)
     fillData()
     protab.show()
     arr.splice(0, arr.length)
 })
 bedEVE.on("click", () => {
-    $('#protab').empty();
+    $('#protab').find("tr:gt(0)").remove();
     arr.push(arrDB)
     fillData()
     protab.show()
     arr.splice(0, arr.length)
 })
 livEVE.on("click", () => {
-    $('#protab').empty();
+    $('#protab').find("tr:gt(0)").remove();
     arr.push(arrDL)
     fillData()
     protab.show()
     arr.splice(0, arr.length)
 })
 shEVE.on("click", () => {
-    $('#protab').empty();
+    $('#protab').find("tr:gt(0)").remove();
     arr.push(arrsh)
     fillData()
     protab.show()
     arr.splice(0, arr.length)
 })
 baEVE.on("click", () => {
-    $('#protab').empty();
+    $('#protab').find("tr:gt(0)").remove();
     arr.push(arrba)
     fillData()
     protab.show()
     arr.splice(0, arr.length)
 })
 divElec.on("click", () => {
-    $('#protab').empty();
+    $('#protab').find("tr:gt(0)").remove();
     eCount++;
     if (eCount % 2 !== 0 || eCount === 0) {
         divElTa.show();
@@ -207,7 +207,7 @@ divElec.on("click", () => {
 
 })
 divClo.on("click", () => {
-    $('#protab').empty();
+    $('#protab').find("tr:gt(0)").remove();
     cCount++
     if (cCount % 2 !== 0 || cCount === 0) {
         divClot.show();
@@ -221,7 +221,7 @@ divClo.on("click", () => {
 
 })
 divDe.on("click", () => {
-    $('#protab').empty();
+    $('#protab').find("tr:gt(0)").remove();
     dCount++
     if (dCount % 2 !== 0 || dCount === 0) {
         divDeco.show();
@@ -235,7 +235,7 @@ divDe.on("click", () => {
 
 })
 divSho.on("click", () => {
-    $('#protab').empty();
+    $('#protab').find("tr:gt(0)").remove();
     sCount++
     if (sCount % 2 !== 0 || sCount === 0) {
         divShB.show();
@@ -248,7 +248,7 @@ divSho.on("click", () => {
     }
 })
 divKit.on("click", () => {
-    $('#protab').empty();
+    $('#protab').find("tr:gt(0)").remove();
     kCount++
     if (kCount % 2 !== 0 || kCount === 0) {
         divkitc.show();
