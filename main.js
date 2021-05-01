@@ -27,11 +27,8 @@ const cartTab = $("#cartTab")
 const btn1 = $("#b0")
 const btn2 = $("#b1")
 const btn3 = $("#b2")
-const sliderS=$("#sliderS")
-const slide1=$(".slider")
-let slide=0;
-let i;
-let y;
+//const cart=$("#cart")
+
 
 const subMain = $("#subMain")
 const eleHead = $("#eleHead")
@@ -103,18 +100,6 @@ cartF = () => {
         console.log(arC[4], arC[5])
     }
 }
-sli = () => {
-    y= document.getElementsByClassName("slide1")
-    for (i = 0; i < y.length; i++) {
-        y[i].style.display = "none";  
-    }
-    slide ++
-    if(slide >y.length){
-        slide=1
-    }
-    y[slide-1].style.display="block"
-    setTimeout(carousel, 2500);
-}
 
 
 nav.appendTo(body)
@@ -126,8 +111,6 @@ divShB.appendTo(body)
 divkitc.appendTo(body)
 divpro.appendTo(body)
 protab.appendTo(divpro)
-sliderS.appendTo(body)
-
 
 lapEve.on("click", () => {
     $('#protab tbody').empty();
