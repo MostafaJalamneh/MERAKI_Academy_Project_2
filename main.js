@@ -336,13 +336,15 @@ showLo.on("click", () => {
 let loginArr = [{ email: "mostafa.jalamneh@gmail.com", user: "mostafa", password: "12345" }]
 
 logBut.on("click", () => {
-    for (let i = 0; i < loginArr.length; i++) {
+    log()
+
+    /*for (let i = 0; i < loginArr.length; i++) {
         if ($("#emText").val() === loginArr[i]["email"] && $("#passText").val() === loginArr[i]["password"]) {
             console.log("true")
         } else {
             console.log("false")
         }
-    }
+    }*/
 })
 let artt = []
 registerBtn.on("click", () => {
@@ -362,4 +364,13 @@ reg = () => {
             artt.push($("#emRInput").val())
         }
     })
+}
+log=() =>{
+    loginArr.forEach((elem, i) => {
+        if ($("#emText").val() === elem["email"] && $("#passText").val() === elem["password"]) {
+            console.log('sucsses')
+        }else{
+            console.log('false')
+        }
+})
 }
