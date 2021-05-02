@@ -344,18 +344,22 @@ logBut.on("click", () => {
         }
     }
 })
-registerBtn.on("click",()=>{
-    for (let i = 0; i < loginArr.length; i++) {
-    if($("#emRInput").val() ===loginArr[i]["email"]){
-        console.log("email is already in array")
-        { break; }
-    }else{
-        reg()
-        console.log('done')
-        { break; }
+let artt = []
+registerBtn.on("click", () => {
+
+    reg()
+    if (artt.length > 0) {
+        console.log("false")
+    } else {
+        console.log("done")
+        loginArr.push({ email: $("#emRInput").val(), user: $("#usRInput").val(), password: $("#pasRInp").val() })
     }
-}
 })
-reg =() =>{
-    loginArr.push({email:$("#emRInput").val(),user:$("#usRInput").val(),password:$("#pasRInp").val()})
+reg = () => {
+    artt.splice(0)
+    loginArr.forEach((elem, i) => {
+        if ($("#emRInput").val() === elem["email"]) {
+            artt.push($("#emRInput").val())
+        }
+    })
 }
