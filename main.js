@@ -345,5 +345,17 @@ logBut.on("click", () => {
     }
 })
 registerBtn.on("click",()=>{
-    
+    for (let i = 0; i < loginArr.length; i++) {
+    if($("#emRInput").val() ===loginArr[i]["email"]){
+        console.log("email is already in array")
+        { break; }
+    }else{
+        reg()
+        console.log('done')
+        { break; }
+    }
+}
 })
+reg =() =>{
+    loginArr.push({email:$("#emRInput").val(),user:$("#usRInput").val(),password:$("#pasRInp").val()})
+}
