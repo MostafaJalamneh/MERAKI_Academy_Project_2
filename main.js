@@ -261,16 +261,19 @@ divKit.on("click", () => {
 let to = 0;
 cart.on("click", () => {
     divCart.show()
+    for(let i=0;i<=ar.length;i++){
     $("<tr>" + "<td>" + ar[0] + "<td>" + ar[1] + ' $' + "<td>" + `<button onclick="Remove()" class='btn1'>Remove</button>` + "</td></td></td></tr>").appendTo(cartTab)
+    to += parseInt(ar[1])
+    ar.splice(0,2)
+    }
     exit.on("click", () => {
         divCart.hide()
-        localStorage.setItem("product", ar)
-        window.localStorage.getItem('test3');
+       // localStorage.setItem("product", ar)
+        //window.localStorage.getItem('test3');
 
     })
-    to += arC[1]
     hTotal.text(' Total= ' + to)
-    localStorage.setItem("total", to)
+    //localStorage.setItem("total", to)
 
 
 })
