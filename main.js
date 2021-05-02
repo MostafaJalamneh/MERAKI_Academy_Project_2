@@ -29,11 +29,13 @@ const btn2 = $("#b1")
 const btn3 = $("#b2")
 const exit = $("#exit")
 const exit1 = $('#exit1')
+const exit2 = $('#exit2')
+const exit3 = $('#exit3')
 const hTotal = $('#hTotal')
 const divShow = $('#divShow')
 const showP = $('#showP')
-
-
+const divLogin = $('#divLogin')
+const showLo=$("#showLo")
 const subMain = $("#subMain")
 const eleHead = $("#eleHead")
 const cloHead = $("#cloHead")
@@ -45,6 +47,9 @@ const divClot = $("#divClot")
 const divClo = $("#divClo")
 const divDeco = $("#divDeco")
 const divDe = $("#divDe")
+const divReg = $("#divReg")
+const goReg=$("#goReg")
+
 
 const elecTa = $("#elecTa")
 const td1 = $("#td1")
@@ -67,6 +72,8 @@ divkitc.hide()
 protab.hide()
 divCart.hide()
 divShow.hide()
+divLogin.hide()
+divReg.hide()
 
 let eCount = 0;
 let cCount = 0;
@@ -136,7 +143,8 @@ divShB.appendTo(body)
 divkitc.appendTo(body)
 divpro.appendTo(body)
 protab.appendTo(divpro)
-
+divLogin.appendTo(body)
+divReg.appendTo(body)
 
 lapEve.on("click", () => {
     $('#protab').find("tr:gt(0)").remove();
@@ -299,5 +307,19 @@ showP.on("click", () => {
     divShow.show()
     exit1.on("click", () => {
         divShow.hide()
+    })
+})
+
+showLo.on("click",() => {
+    divLogin.show()
+    exit3.on("click", () => {
+        divLogin.hide()
+    })
+    goReg.on("click", () => {
+        divLogin.hide()
+        divReg.show() 
+    })
+    exit2.on("click", () => {
+        divReg.hide()
     })
 })

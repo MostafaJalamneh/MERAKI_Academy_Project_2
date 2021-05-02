@@ -60,6 +60,28 @@
   left: 0px;
   color: white;
 }
+#divLogin{
+  position: fixed;
+  margin-top: 100px;
+  margin-left: 37vw;
+  width: 500px;
+  height: 500px;
+  background: #c07409;
+  top: 0px;
+  left: 0px;
+  color: white;
+}
+#divReg{
+  position: fixed;
+  margin-top: 100px;
+  margin-left: 37vw;
+  width: 500px;
+  height: 500px;
+  background: #c07409;
+  top: 0px;
+  left: 0px;
+  color: white;
+}
 #divElec,
 #divClo,
 #divDe,
@@ -79,12 +101,14 @@
   font-size: 36px;
   font-weight: bold;
 }
-#exit {
-  color: red;
+#goReg a{
+  padding-left: 15px;
+  color: green;
 }
-#exit1 {
-  color: red;
+#divGo{
+  margin-top: 15px;
 }
+
 .inp {
   width: 220px;
   height: 30;
