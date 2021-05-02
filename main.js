@@ -89,18 +89,42 @@ let a = [];
 let arC = [];
 let art = [];
 let ar = [];
-
+let test = []
 fillData = () => {
     for (let i1 = 0; i1 < arr[0].length; i1++) {
         a = Object.values(arr[0][i1])
         art.unshift(a[0], a[1])
         arC.push(art[0], art[1])
-        $("<tr> " + "<td>" + a[0] + "<td>" + a[1] + ' $' + "<td>" + `'<img class="image_1" src=${a[2]} '` + "<td>" + "<td>" + `<button onclick="cartF('${art[0]}', '${art[1]}')" id='b${i1}' class='btn'>BUY</button>` + "</td></td></td></td></td></tr>").appendTo(protab)
+        $("<tr> " + "<td>" + a[0] + "<td>" + a[1] + ' $' + "<td>" + `'<img class="image_1" src=${a[2]} '` + "<td>" + "<td>" + `<button onclick="cartF('${art[0]}', ${art[1]})" class='btn'>BUY</button>` + "</td></td></td></td></td></tr>").appendTo(protab)
     }
 }
 cartF = (a, b) => {
-    ar.push(a, b)
+    ar.push({ name: a, price: b })
 }
+cartS = () => {
+    to=0
+    $("#cartTab").find("tr:not(:first)").remove();
+    if (ar.length === 0) {
+
+    } else {
+        for (let i = 0; i < ar.length; i++) {
+            $("<tr>" + "<td>" + ar[i]["name"] + "<td>" + ar[i]["price"] + ' $' + "<td>" + `<button onclick="Remove('${i}')" class='btn1'>Remove</button>` + "</td></td></td></tr>").appendTo(cartTab)
+            to += ar[i]["price"]
+        }
+    }
+    hTotal.text(' Total= ' + to+' $')
+    //localStorage.setItem("total", to)
+}
+Remove = (a) => {
+    to=0;
+    ar.splice(a,1)
+    cartS()
+    //to -=
+    //cartTab
+    //$("#cartTab").find("tr:not(:first)").remove();
+    
+}
+
 
 
 nav.appendTo(body)
@@ -261,27 +285,16 @@ divKit.on("click", () => {
 let to = 0;
 cart.on("click", () => {
     divCart.show()
-    for(let i=0;i<=ar.length;i++){
-    $("<tr>" + "<td>" + ar[0] + "<td>" + ar[1] + ' $' + "<td>" + `<button onclick="Remove()" class='btn1'>Remove</button>` + "</td></td></td></tr>").appendTo(cartTab)
-    to += parseInt(ar[1])
-    ar.splice(0,2)
-    }
+    cartS()
+
     exit.on("click", () => {
         divCart.hide()
-       // localStorage.setItem("product", ar)
+        // localStorage.setItem("product", ar)
         //window.localStorage.getItem('test3');
 
     })
-    hTotal.text(' Total= ' + to)
-    //localStorage.setItem("total", to)
-
 
 })
-Remove = () => {
-    $('#cartTab ').find("tr:gt(0)").remove();;
-    hTotal.text(' Total= ' + 0)
-    to -= arC[1]
-}
 showP.on("click", () => {
     divShow.show()
     exit1.on("click", () => {
