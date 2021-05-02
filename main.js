@@ -35,7 +35,7 @@ const hTotal = $('#hTotal')
 const divShow = $('#divShow')
 const showP = $('#showP')
 const divLogin = $('#divLogin')
-const showLo=$("#showLo")
+const showLo = $("#showLo")
 const subMain = $("#subMain")
 const eleHead = $("#eleHead")
 const cloHead = $("#cloHead")
@@ -48,7 +48,17 @@ const divClo = $("#divClo")
 const divDeco = $("#divDeco")
 const divDe = $("#divDe")
 const divReg = $("#divReg")
-const goReg=$("#goReg")
+const goReg = $("#goReg")
+const emText = $("#emText")
+const passText = $("#passText")
+const logBut = $("#logBut")
+const emRInput = $("#emRInput")
+const usRInput = $("#usRInput")
+const pasRInp = $("#pasRInp")
+const cpasRInp = $("#cpasRInp")
+const registerBtn = $("#registerBtn")
+
+
 
 
 const elecTa = $("#elecTa")
@@ -109,7 +119,7 @@ cartF = (a, b) => {
     ar.push({ name: a, price: b })
 }
 cartS = () => {
-    to=0
+    to = 0
     $("#cartTab").find("tr:not(:first)").remove();
     if (ar.length === 0) {
 
@@ -119,17 +129,17 @@ cartS = () => {
             to += ar[i]["price"]
         }
     }
-    hTotal.text(' Total= ' + to+' $')
+    hTotal.text(' Total= ' + to + ' $')
     //localStorage.setItem("total", to)
 }
 Remove = (a) => {
-    to=0;
-    ar.splice(a,1)
+    to = 0;
+    ar.splice(a, 1)
     cartS()
     //to -=
     //cartTab
     //$("#cartTab").find("tr:not(:first)").remove();
-    
+
 }
 
 
@@ -310,16 +320,30 @@ showP.on("click", () => {
     })
 })
 
-showLo.on("click",() => {
+showLo.on("click", () => {
     divLogin.show()
     exit3.on("click", () => {
         divLogin.hide()
     })
     goReg.on("click", () => {
         divLogin.hide()
-        divReg.show() 
+        divReg.show()
     })
     exit2.on("click", () => {
         divReg.hide()
     })
+})
+let loginArr = [{ email: "mostafa.jalamneh@gmail.com", user: "mostafa", password: "12345" }]
+
+logBut.on("click", () => {
+    for (let i = 0; i < loginArr.length; i++) {
+        if ($("#emText").val() === loginArr[i]["email"] && $("#passText").val() === loginArr[i]["password"]) {
+            console.log("true")
+        } else {
+            console.log("false")
+        }
+    }
+})
+registerBtn.on("click",()=>{
+    
 })
