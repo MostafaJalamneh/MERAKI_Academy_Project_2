@@ -59,10 +59,15 @@ const cpasRInp = $("#cpasRInp")
 const registerBtn = $("#registerBtn")
 const userP = $("#userP")
 const arrow = $("#arrow")
-
+const SBtn=$("#SBtn")
 const elecTa = $("#elecTa")
 const td1 = $("#td1")
 const divElec = $("#divElec")
+const coNIn=$("#coNIn")
+const YNIn=$("#YNIn")
+const YEIn=$("#YEIn")
+const chP=$("#chP")
+
 
 header.css("color", "white");
 td1.css("background-image", "url(./images/HP.png)")
@@ -303,9 +308,6 @@ cart.on("click", () => {
 
     exit.on("click", () => {
         divCart.hide()
-        // localStorage.setItem("product", ar)
-        //window.localStorage.getItem('test3');
-
     })
 
 })
@@ -339,13 +341,13 @@ registerBtn.on("click", () => {
     reg()
     if (artt.length > 0) {
         console.log("email already used")
-    }else if($("#usRInput").val()==='' &&$("#pasRInp").val()==="" ){ 
+    } else if ($("#usRInput").val() === '' && $("#pasRInp").val() === "") {
         console.log(" User name and password must not be empty")
-    }else if($("#usRInput").val()==='') {
+    } else if ($("#usRInput").val() === '') {
         console.log(" user name must not be empty")
-    }else if($("#pasRInp").val()===""){
+    } else if ($("#pasRInp").val() === "") {
         console.log("password must not be empty")
-    }else{
+    } else {
         console.log("Register done")
         loginArr.push({ email: $("#emRInput").val(), user: $("#usRInput").val(), password: $("#pasRInp").val() })
     }
@@ -363,7 +365,8 @@ log = () => {
         if ($("#emText").val() === elem["email"] && $("#passText").val() === elem["password"]) {
             userP.show()
             console.log("login success")
-        }else{
+            divLogin.hide()
+        } else {
             console.log("login fail")
         }
     })
@@ -372,3 +375,10 @@ arrow.on("click", () => {
     divReg.hide()
     divLogin.show()
 })
+SBtn.on("click",() =>{
+    if($("#YEIn").val() !=="" && $("#coNIn").val() !==""&&$("#YNIn").val() !==""){
+      chP.text("The request was send")
+    }else{
+        chP.text("Pleas fill all data")
+    }
+})//chP 
