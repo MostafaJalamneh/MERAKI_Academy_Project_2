@@ -18,7 +18,6 @@
 }
 #divnav {
   display: flex;
-  justify-content: space-around;
   background-color: #237d91;
   width: 100wh;
   justify-content: space-between;
@@ -48,7 +47,7 @@
   top: 0px;
   left: 0px;
   color: black;
-  overflow:scroll;
+  overflow: scroll;
 }
 #divShow {
   position: fixed;
@@ -96,10 +95,9 @@
 #divpro {
   margin-top: 70px;
 }
-#regBar{
+#regBar {
   display: flex;
-  justify-content:space-between;
-  border-bottom: turquoise solid 1px;
+  justify-content: space-between;
 }
 #header {
   color: white;
@@ -117,9 +115,21 @@
 }
 #userPic {
   color: white;
+  padding-left: 8px;
 }
-.font{
-  font-family: 'Times New Roman', Times, serif;
+#ex{
+  display: flex;
+  justify-content:flex-end;
+}
+.center {
+  display: flex;
+  justify-content: center;
+}
+.zoom:hover {
+  transform: scale(2.7);
+}
+.font {
+  font-family: "Times New Roman", Times, serif;
   font-weight: bold;
 }
 .inp {
@@ -141,7 +151,8 @@
   padding-left: 10px;
   padding-right: 10px;
   display: flex;
-  justify-content: space-between;
+  display: flex;
+  justify-content: space-evenly;
 }
 .productBox {
   display: flex;
@@ -176,6 +187,9 @@
 }
 .cur:hover {
   cursor: pointer;
+}
+#cart:hover {
+  color: black;
 }
 .btn {
   width: 100px;
@@ -237,12 +251,11 @@ ul {
   list-style-type: none;
 }
 li a {
-  font-size: 18px;
+  font-size: 19px;
   font-weight: bold;
   color: white;
   text-decoration: none;
-  text-align: center;
 }
 li a:hover {
-  color: #FAC23C;
+  color: #fac23c;
 }

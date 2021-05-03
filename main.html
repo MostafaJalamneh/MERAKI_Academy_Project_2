@@ -18,13 +18,15 @@
         <div id="divnav">
             <h1 id="header"></h1>
             <div id="divT">
-                <ul>
-                    <li><a href="mailto:mostafa.jalamneh17@gmail.com?subject=subject&body=Write your message here">
-                            Contact Us </a></li>
-                    <li id="showP"><a href="#divShow">Show your products</a></li>
-                    <li id="showLo"><a href="#divLogin">Login</a></li>
+                <div>
+                    <ul>
+                        <li><a href="mailto:mostafa.jalamneh17@gmail.com?subject=subject&body=Write your message here">
+                                Contact Us </a></li>
+                        <li id="showP"><a href="#divShow">Show your products</a></li>
+                        <li id="showLo"><a href="#divLogin">Login</a></li>
 
-                </ul>
+                    </ul>
+                </div>
                 <svg id="cart" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                     class="bi bi-cart4 cur" viewBox="0 0 16 16">
                     <path
@@ -120,51 +122,48 @@
 
                     </div>
                     <div id="divLogin">
-                        <svg id="exit3" xmlns="http://www.w3.org/2000/svg" width="30" height="25" fill="currentColor"
-                            class="bi bi-x-square-fill cur " viewBox="0 0 16 16">
-                            <path
-                                d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z" />
-                        </svg>
-                        <h2 class="font">Login Page</h2>
+                        <div id="ex">
+                            <svg id="exit3" xmlns="http://www.w3.org/2000/svg" width="30" height="25"
+                                fill="currentColor" class="bi bi-x-square-fill cur " viewBox="0 0 16 16">
+                                <path
+                                    d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z" />
+                            </svg>
+                        </div>
+                        <h2 class="font center">Login Page</h2>
                         <div class="cName">
-                            <h5 class="font">E-mail</h5>
-                            <input id="emText" type="text" class="inp">
+                            <input id="emText" type="text" class="inp" placeholder=" Enter your Email">
                         </div>
                         <div class="cName">
-                            <h5 class="font">Password</h5>
-                            <input id="passText" type="password" class="inp">
+                            <input id="passText" type="password" class="inp" placeholder=" Enter password">
                         </div>
                         <button id="logBut" class="sBtn font">Login</button>
                         <div id="divGo">
-                            <h5 id="goReg" class="font"><a href="#divReg">do not have an account?</a></h5>
+                            <h5 id="goReg" class="font center"><a href="#divReg">do not have an account?</a></h5>
                         </div>
                     </div>
                     <div id="divReg">
                         <div id="regBar">
-                            <svg id="exit2" xmlns="http://www.w3.org/2000/svg" width="30" height="25"
-                                fill="currentColor" class="bi bi-x-square-fill cur" viewBox="0 0 16 16">
-                                <path
-                                    d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z" />
-                            </svg>
                             <svg id="arrow" class="cur" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                 fill="currentColor" class="bi bi-arrow-left-square-fill" viewBox="0 0 16 16">
                                 <path
                                     d="M16 14a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12zm-4.5-6.5H5.707l2.147-2.146a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708-.708L5.707 8.5H11.5a.5.5 0 0 0 0-1z" />
                             </svg>
+                            <svg id="exit2" xmlns="http://www.w3.org/2000/svg" width="30" height="25"
+                                fill="currentColor" class="bi bi-x-square-fill cur" viewBox="0 0 16 16">
+                                <path
+                                    d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z" />
+                            </svg>
                         </div>
-                        <h2 class="font">Register Page</h2>
+                        <h2 class="font center">Register Page</h2>
                         <div class="cName">
-                            <h5 class="font">E-mail</h5>
-                            <input id="emRInput" type="text" class="inp">
+                            <input id="emRInput" type="text" class="inp" placeholder=" Enter your Email">
                         </div>
 
                         <div class="cName">
-                            <h5 class="font">User Name</h5>
-                            <input id="usRInput" type="text" class="inp">
+                            <input id="usRInput" type="text" class="inp" placeholder=" Enter your name">
                         </div>
                         <div class="cName">
-                            <h5 class="font">Password</h5>
-                            <input id="pasRInp" type="password" class="inp">
+                            <input id="pasRInp" type="password" class="inp" placeholder=" Enter password">
                         </div>
                         <button id="registerBtn" class="sBtn">Register</button>
                     </div>

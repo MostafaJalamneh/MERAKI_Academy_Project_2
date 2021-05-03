@@ -58,7 +58,7 @@ const pasRInp = $("#pasRInp")
 const cpasRInp = $("#cpasRInp")
 const registerBtn = $("#registerBtn")
 const userP = $("#userP")
-const arrow=$("#arrow")
+const arrow = $("#arrow")
 
 const elecTa = $("#elecTa")
 const td1 = $("#td1")
@@ -112,7 +112,7 @@ fillData = () => {
         a = Object.values(arr[0][i1])
         art.unshift(a[0], a[1])
         arC.push(art[0], art[1])
-        $("<tr> " + "<td>" + a[0] + "<td>" + a[1] + ' $' + "<td>" + `'<img class="image_1" src=${a[2]} '` + "<td>" + "<td>" + `<button onclick="cartF('${art[0]}', ${art[1]})" class='btn'>BUY</button>` + "</td></td></td></td></td></tr>").appendTo(protab)
+        $("<tr> " + "<td>" + a[0] + "<td>" + a[1] + ' $' + "<td>" + `'<img class="image_1 zoom" src=${a[2]} '` + "<td>" + "<td>" + `<button onclick="cartF('${art[0]}', ${art[1]})" class='btn'>BUY</button>` + "</td></td></td></td></td></tr>").appendTo(protab)
     }
 }
 cartF = (a, b) => {
@@ -129,8 +129,8 @@ cartS = () => {
             to += ar[i]["price"]
         }
     }
-    hTotal.text(' Total= ' + to + ' $')
-    //localStorage.setItem("total", to)
+    localStorage.setItem("total", to)
+    hTotal.text(' Total= ' + localStorage.getItem("total") + ' $')
 }
 Remove = (a) => {
     to = 0;
@@ -333,22 +333,20 @@ let loginArr = [{ email: "mostafa.jalamneh@gmail.com", user: "mostafa", password
 
 logBut.on("click", () => {
     log()
-
-    /*for (let i = 0; i < loginArr.length; i++) {
-        if ($("#emText").val() === loginArr[i]["email"] && $("#passText").val() === loginArr[i]["password"]) {
-            console.log("true")
-        } else {
-            console.log("false")
-        }
-    }*/
 })
 let artt = []
 registerBtn.on("click", () => {
     reg()
     if (artt.length > 0) {
-        console.log("false")
-    } else {
-        console.log("done")
+        console.log("email already used")
+    }else if($("#usRInput").val()==='' &&$("#pasRInp").val()==="" ){ 
+        console.log(" User name and password must not be empty")
+    }else if($("#usRInput").val()==='') {
+        console.log(" user name must not be empty")
+    }else if($("#pasRInp").val()===""){
+        console.log("password must not be empty")
+    }else{
+        console.log("Register done")
         loginArr.push({ email: $("#emRInput").val(), user: $("#usRInput").val(), password: $("#pasRInp").val() })
     }
 })
@@ -364,10 +362,13 @@ log = () => {
     loginArr.forEach((elem, i) => {
         if ($("#emText").val() === elem["email"] && $("#passText").val() === elem["password"]) {
             userP.show()
+            console.log("login success")
+        }else{
+            console.log("login fail")
         }
     })
 }
-arrow.on("click",() =>{
+arrow.on("click", () => {
     divReg.hide()
     divLogin.show()
 })
