@@ -19,7 +19,7 @@
 #divnav {
   display: flex;
   justify-content: space-around;
-  background-color: #0f292f;
+  background-color: #237D91;
   width: 100wh;
   justify-content: space-between;
   align-items: center;
@@ -44,7 +44,7 @@
   margin-left: 37vw;
   width: 500px;
   height: 500px;
-  background: #c07409;
+  background: #DE8535;
   top: 0px;
   left: 0px;
   color: white;
@@ -55,7 +55,7 @@
   margin-left: 37vw;
   width: 500px;
   height: 500px;
-  background: #c07409;
+  background: #DEA878;
   top: 0px;
   left: 0px;
   color: white;
@@ -66,7 +66,7 @@
   margin-left: 37vw;
   width: 500px;
   height: 500px;
-  background: #c07409;
+  background: #DEA878;
   top: 0px;
   left: 0px;
   color: white;
@@ -77,7 +77,7 @@
   margin-left: 37vw;
   width: 500px;
   height: 500px;
-  background: #c07409;
+  background: #DEA878;
   top: 0px;
   left: 0px;
   color: white;
@@ -201,6 +201,12 @@ td {
 }
 #cart {
   color: white;
+  margin-left: 10px;
+  width: 30px;
+  height: 30px;
+  left: 50%;
+}
+#userPic{
   margin-left: 10px;
   width: 30px;
   height: 30px;

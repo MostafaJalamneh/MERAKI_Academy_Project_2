@@ -57,9 +57,7 @@ const usRInput = $("#usRInput")
 const pasRInp = $("#pasRInp")
 const cpasRInp = $("#cpasRInp")
 const registerBtn = $("#registerBtn")
-
-
-
+const userP = $("#userP")
 
 const elecTa = $("#elecTa")
 const td1 = $("#td1")
@@ -84,6 +82,7 @@ divCart.hide()
 divShow.hide()
 divLogin.hide()
 divReg.hide()
+userP.hide()
 
 let eCount = 0;
 let cCount = 0;
@@ -136,10 +135,6 @@ Remove = (a) => {
     to = 0;
     ar.splice(a, 1)
     cartS()
-    //to -=
-    //cartTab
-    //$("#cartTab").find("tr:not(:first)").remove();
-
 }
 
 
@@ -365,12 +360,12 @@ reg = () => {
         }
     })
 }
-log=() =>{
+log = () => {
     loginArr.forEach((elem, i) => {
         if ($("#emText").val() === elem["email"] && $("#passText").val() === elem["password"]) {
             console.log('sucsses')
-        }else{
+        } else {
             console.log('false')
         }
-})
+    })
 }
