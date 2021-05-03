@@ -19,7 +19,7 @@
 #divnav {
   display: flex;
   justify-content: space-around;
-  background-color: #237D91;
+  background-color: #237d91;
   width: 100wh;
   justify-content: space-between;
   align-items: center;
@@ -44,10 +44,11 @@
   margin-left: 37vw;
   width: 500px;
   height: 500px;
-  background: #DE8535;
+  background: rgb(124, 121, 121);
   top: 0px;
   left: 0px;
-  color: white;
+  color: black;
+  overflow:scroll;
 }
 #divShow {
   position: fixed;
@@ -55,32 +56,32 @@
   margin-left: 37vw;
   width: 500px;
   height: 500px;
-  background: #DEA878;
+  background: rgb(124, 121, 121);
   top: 0px;
   left: 0px;
-  color: white;
+  color: black;
 }
-#divLogin{
+#divLogin {
   position: fixed;
   margin-top: 100px;
   margin-left: 37vw;
   width: 500px;
   height: 500px;
-  background: #DEA878;
+  background: rgb(124, 121, 121);
   top: 0px;
   left: 0px;
-  color: white;
+  color: black;
 }
-#divReg{
+#divReg {
   position: fixed;
   margin-top: 100px;
   margin-left: 37vw;
   width: 500px;
   height: 500px;
-  background: #DEA878;
+  background: rgb(124, 121, 121);
   top: 0px;
   left: 0px;
-  color: white;
+  color: black;
 }
 #divElec,
 #divClo,
@@ -95,20 +96,32 @@
 #divpro {
   margin-top: 70px;
 }
+#regBar{
+  display: flex;
+  justify-content:space-between;
+  border-bottom: turquoise solid 1px;
+}
 #header {
   color: white;
   font-family: "Times New Roman", Times, serif;
   font-size: 36px;
   font-weight: bold;
 }
-#goReg a{
+#goReg a {
+  font-size: 21px;
   padding-left: 15px;
-  color: green;
+  color: rgb(4, 117, 4);
 }
-#divGo{
+#divGo {
   margin-top: 15px;
 }
-
+#userPic {
+  color: white;
+}
+.font{
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+}
 .inp {
   width: 220px;
   height: 30;
@@ -206,7 +219,7 @@ td {
   height: 30px;
   left: 50%;
 }
-#userPic{
+#userPic {
   margin-left: 10px;
   width: 30px;
   height: 30px;
@@ -231,5 +244,5 @@ li a {
   text-align: center;
 }
 li a:hover {
-  color: rgb(94, 20, 231);
+  color: #FAC23C;
 }

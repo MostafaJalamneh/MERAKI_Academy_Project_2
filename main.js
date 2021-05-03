@@ -58,6 +58,7 @@ const pasRInp = $("#pasRInp")
 const cpasRInp = $("#cpasRInp")
 const registerBtn = $("#registerBtn")
 const userP = $("#userP")
+const arrow=$("#arrow")
 
 const elecTa = $("#elecTa")
 const td1 = $("#td1")
@@ -343,7 +344,6 @@ logBut.on("click", () => {
 })
 let artt = []
 registerBtn.on("click", () => {
-
     reg()
     if (artt.length > 0) {
         console.log("false")
@@ -363,9 +363,11 @@ reg = () => {
 log = () => {
     loginArr.forEach((elem, i) => {
         if ($("#emText").val() === elem["email"] && $("#passText").val() === elem["password"]) {
-            console.log('sucsses')
-        } else {
-            console.log('false')
+            userP.show()
         }
     })
 }
+arrow.on("click",() =>{
+    divReg.hide()
+    divLogin.show()
+})
