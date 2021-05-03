@@ -59,15 +59,16 @@ const cpasRInp = $("#cpasRInp")
 const registerBtn = $("#registerBtn")
 const userP = $("#userP")
 const arrow = $("#arrow")
-const SBtn=$("#SBtn")
+const SBtn = $("#SBtn")
 const elecTa = $("#elecTa")
 const td1 = $("#td1")
 const divElec = $("#divElec")
-const coNIn=$("#coNIn")
-const YNIn=$("#YNIn")
-const YEIn=$("#YEIn")
-const chP=$("#chP")
-
+const coNIn = $("#coNIn")
+const YNIn = $("#YNIn")
+const YEIn = $("#YEIn")
+const chP = $("#chP")
+const logP = $("#logP")
+const RegP = $("#RegP")
 
 header.css("color", "white");
 td1.css("background-image", "url(./images/HP.png)")
@@ -319,12 +320,14 @@ showP.on("click", () => {
 })
 
 showLo.on("click", () => {
+    logP.text("")
     divLogin.show()
     exit3.on("click", () => {
         divLogin.hide()
     })
     goReg.on("click", () => {
         divLogin.hide()
+        RegP.text("")
         divReg.show()
     })
     exit2.on("click", () => {
@@ -338,17 +341,18 @@ logBut.on("click", () => {
 })
 let artt = []
 registerBtn.on("click", () => {
+    RegP.text("")
     reg()
     if (artt.length > 0) {
-        console.log("email already used")
+        RegP.text("email already used")
     } else if ($("#usRInput").val() === '' && $("#pasRInp").val() === "") {
-        console.log(" User name and password must not be empty")
+        RegP.text(" User name and password must not be empty")
     } else if ($("#usRInput").val() === '') {
-        console.log(" user name must not be empty")
+        RegP.text(" user name must not be empty")
     } else if ($("#pasRInp").val() === "") {
-        console.log("password must not be empty")
+        RegP.text("password must not be empty")
     } else {
-        console.log("Register done")
+        RegP.text("Register done")
         loginArr.push({ email: $("#emRInput").val(), user: $("#usRInput").val(), password: $("#pasRInp").val() })
     }
 })
@@ -364,10 +368,9 @@ log = () => {
     loginArr.forEach((elem, i) => {
         if ($("#emText").val() === elem["email"] && $("#passText").val() === elem["password"]) {
             userP.show()
-            console.log("login success")
             divLogin.hide()
         } else {
-            console.log("login fail")
+            logP.text("User name or password incorrect")
         }
     })
 }
@@ -375,10 +378,11 @@ arrow.on("click", () => {
     divReg.hide()
     divLogin.show()
 })
-SBtn.on("click",() =>{
-    if($("#YEIn").val() !=="" && $("#coNIn").val() !==""&&$("#YNIn").val() !==""){
-      chP.text("The request was send")
-    }else{
+SBtn.on("click", () => {
+    chP.text("")
+    if ($("#YEIn").val() !== "" && $("#coNIn").val() !== "" && $("#YNIn").val() !== "") {
+        chP.text("The request was send")
+    } else {
         chP.text("Pleas fill all data")
     }
-})//chP 
+})
